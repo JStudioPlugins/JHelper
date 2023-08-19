@@ -24,7 +24,7 @@ namespace JHelper
     {
         public static JHelper Instance { get; private set; }
 
-        public static string CommitId = "79f81686b6ba9199897a9b75965cbf93ea03fa07";
+        public static string CommitId = "79f81686b6ba9199897a9b75965cbf93ea03fa0";
 
         public static event Action OnLoad;
 
