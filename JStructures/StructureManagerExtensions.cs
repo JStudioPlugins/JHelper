@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace JHelper.StructureExtensions
+namespace JHelper.JStructures
 {
     public static class StructureManagerExtensions
     {

@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,11 +38,15 @@
     </Reference>
     <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\Desktop\Libraries\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="com.rlabrecque.steamworks.net, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\com.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="CSharpDonateBot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\CSharpDonateBot.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -95,19 +100,28 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnturnedDat">
+      <HintPath>..\..\..\Desktop\Libraries\UnturnedDat.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BarricadeExtensions\BarricadeManagerExtensions.cs" />
+    <Compile Include="JBarricades\BarricadeExtensions.cs" />
+    <Compile Include="JBarricades\BarricadeManagerExtensions.cs" />
+    <Compile Include="Components\JPlayer.cs" />
     <Compile Include="JHelper.cs" />
-    <Compile Include="PlayerExtensions\FreezePlayerExtensions.cs" />
-    <Compile Include="PlayerExtensions\ItemPlayerExtensions.cs" />
+    <Compile Include="JPlayers\FreezePlayerExtensions.cs" />
+    <Compile Include="JPlayers\ItemPlayerExtensions.cs" />
+    <Compile Include="JPlayers\PlayerToolExtended.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StructureExtensions\StructureManagerExtensions.cs" />
+    <Compile Include="JStructures\StructureDropExtensions.cs" />
+    <Compile Include="JStructures\StructureManagerExtensions.cs" />
+    <Compile Include="Weapons\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="lib\0Harmony.dll" />
     <Content Include="lib\Assembly-CSharp.dll" />
     <Content Include="lib\com.rlabrecque.steamworks.net.dll" />
+    <Content Include="lib\CSharpDonateBot.dll" />
     <Content Include="lib\Newtonsoft.Json.dll" />
     <Content Include="lib\Rocket.API.dll" />
     <Content Include="lib\Rocket.Core.dll" />
@@ -119,6 +133,9 @@
     <Content Include="lib\UnityEngine.CoreModule.dll" />
     <Content Include="lib\UnityEngine.dll" />
     <Content Include="lib\UnityEngine.PhysicsModule.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="JAssets\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

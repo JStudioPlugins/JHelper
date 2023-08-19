@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SDG.Unturned;
 
-namespace JHelper.PlayerExtensions
+namespace JHelper.JPlayers
 {
     public static class FreezePlayerExtensions
     {
@@ -20,7 +20,7 @@ namespace JHelper.PlayerExtensions
                 player.movement.sendPluginSpeedMultiplier(0);
                 player.movement.sendPluginGravityMultiplier(0);
             });
-            JHelper.DebugLog($"{player.channel.owner.playerID.characterName} was frozen!");
+            JHelper.AdvancedLog($"{player.channel.owner.playerID.characterName} was frozen!");
         }
 
         public static void UnfreezePlayer(this Player player, float gravity = 1f, float speed = 1f, float jump = 1f)
@@ -31,7 +31,7 @@ namespace JHelper.PlayerExtensions
                 player.movement.sendPluginSpeedMultiplier(speed);
                 player.movement.sendPluginGravityMultiplier(gravity);
             });
-            JHelper.DebugLog($"{player.channel.owner.playerID.characterName} was unfrozen!");
+            JHelper.AdvancedLog($"{player.channel.owner.playerID.characterName} was unfrozen!");
         }
     }
 }

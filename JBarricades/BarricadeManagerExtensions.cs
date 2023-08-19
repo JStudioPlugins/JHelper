@@ -8,11 +8,11 @@ using SDG.Unturned;
 using Steamworks;
 using UnityEngine;
 
-namespace JHelper.BarricadeExtensions
+namespace JHelper.JBarricades
 {
     public static class BarricadeManagerExtensions
     {
-        public static void UpdateStorageOwner(this BarricadeManager manager, Barricade storage, Transform storageTransform, CSteamID owner, CSteamID group)
+        public static void UpdateStorageOwner(this BarricadeManager manager, SDG.Unturned.Barricade storage, Transform storageTransform, CSteamID owner, CSteamID group)
         {
             byte[] state = storage.state;
 
@@ -23,7 +23,7 @@ namespace JHelper.BarricadeExtensions
             BarricadeManager.changeOwnerAndGroup(storageTransform, owner.m_SteamID, group.m_SteamID);
         }
 
-        public static void UpdateDoorOwner(this BarricadeManager manager, Barricade door, Transform doorTransform, CSteamID owner, CSteamID group)
+        public static void UpdateDoorOwner(this BarricadeManager manager, SDG.Unturned.Barricade door, Transform doorTransform, CSteamID owner, CSteamID group)
         {
             byte[] state = door.state;
 

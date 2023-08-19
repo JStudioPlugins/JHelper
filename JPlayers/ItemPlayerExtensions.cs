@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JHelper.PlayerExtensions
+namespace JHelper.JPlayers
 {
     public static class ItemPlayerExtensions
     {
@@ -27,7 +27,7 @@ namespace JHelper.PlayerExtensions
             }
             else
             {
-                JHelper.DebugLog("Attempted to get a currency value using an invalid ItemCurrencyAsset GUID!");
+                JHelper.AdvancedLog("Attempted to get a currency value using an invalid ItemCurrencyAsset GUID!");
                 return 0;
             }
         }
@@ -41,7 +41,7 @@ namespace JHelper.PlayerExtensions
             }
             else
             {
-                JHelper.DebugLog("Attempted to check if afford using an invalid ItemCurrencyAsset GUID!");
+                JHelper.AdvancedLog("Attempted to check if afford using an invalid ItemCurrencyAsset GUID!");
                 return false;
             }
         }
@@ -55,7 +55,7 @@ namespace JHelper.PlayerExtensions
             }
             else
             {
-                JHelper.DebugLog("Attempted to spend value using an invalid ItemCurrencyAsset GUID!");
+                JHelper.AdvancedLog("Attempted to spend value using an invalid ItemCurrencyAsset GUID!");
                 return false;
             }
         }
@@ -70,7 +70,7 @@ namespace JHelper.PlayerExtensions
             }
             else
             {
-                JHelper.DebugLog("Attempted to spend value using an invalid ItemCurrencyAsset GUID!");
+                JHelper.AdvancedLog("Attempted to spend value using an invalid ItemCurrencyAsset GUID!");
                 return;
             }
         }
